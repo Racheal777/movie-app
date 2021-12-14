@@ -112,7 +112,7 @@ header{
 input{
     width: 100%;
    padding: 0.8rem;
-   color: white;
+   /* color: white; */
    margin: 0.6em;
    border-radius: 5px;
    border: none;

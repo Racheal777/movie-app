@@ -28,17 +28,17 @@ app.get('/signup', (req,res) => {
 //post request
 app.post('/signup', async (req,res) =>{
     
-        var FirstName    = req.body.FirstName;
-        var LastName     = req.body.LastName;
-        var Email        = req.body.Email;
-        var Username     = req.body.Username;
-        var Pass         = req.body.Password;
+        var fname    = req.body.fname;
+        var lname     = req.body.lname;
+        var email        = req.body.email;
+        var username     = req.body.username;
+        var Pass         = req.body.password;
         
         var data = {
-            "FirstName": FirstName,
-            "LastName" : LastName,
-            "Email"    :  Email,
-            "Username"  : Username,
+            "fname": fname,
+            "lname" : lname,
+            "email"    :  email,
+            "username"  : username,
             "password"  : Pass,
             
          }
@@ -47,6 +47,7 @@ app.post('/signup', async (req,res) =>{
     db.collection('Users').insertOne(data, (err,results) =>{
         if(err) throw err
         if(results) res.send(data) 
+        console.log(data)
         console.log("Account created successfully")
    
         
@@ -55,15 +56,23 @@ app.post('/signup', async (req,res) =>{
 
 })
 
-app.get('/redirect-path', (req,res) => {
-    res.redirect('/')
+//login post/find request
+
+app.post('/login', async (req,res) => {
+
+    
+    const db = await connection.getConnection("Cinema")
+    const username = req.body.username
+    const password = req.body.password
+
+   db.collection('Users').findOne({"username":username, "password":password}, (err,results) =>{
+        if(err)  throw err
+        if(results) res.send(username)
+        console.log(results) 
+        
+     
+    })
 })
-
-
-// app.get('/login', (req,res) => {
-//     res.set({"Access-control-Allow-Origin": '*'});
-//     return res.redirect('index.html')
-// })
 
 
 

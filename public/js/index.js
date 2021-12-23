@@ -54,6 +54,7 @@ function showMovies(movies){
 
         
         movieEl.innerHTML = `
+        
         <div id="card">
         
         <img src="${image_path + poster_path}" alt="${title}">

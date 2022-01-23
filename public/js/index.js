@@ -4,8 +4,10 @@ const api_url = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.
 const image_path = "https://image.tmdb.org/t/p/w1280"
 //const query_search = "https://api.themoviedb.org/3/search/movie?api_key={96d02017571e08961a0f88fe9a7641c0}&query=='"
 const querySearch = 'https://api.themoviedb.org/3/search/movie?api_key=96d02017571e08961a0f88fe9a7641c0&query="'
-const videos = "https://api.themoviedb.org/3/movie/550/videos?api_key=96d02017571e08961a0f88fe9a7641c0&language=en-US"
+const videos = "https://api.themoviedb.org/3/movie/438695/videos?api_key=96d02017571e08961a0f88fe9a7641c0&language=en-US"
 const trailer = "https://www.youtube.com/watch?v="
+
+const ved = 'https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=<<api_key>>&language=en-US'
 // console.log(apiUrl)
 
 
@@ -95,6 +97,7 @@ form.addEventListener("submit", (e) => {
         window.location.reload()
     }
 
+   
     
 })
 

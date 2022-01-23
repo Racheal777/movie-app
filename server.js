@@ -25,6 +25,10 @@ app.get('/signup', (req,res) => {
     res.sendFile('/views/signup.html', {root: __dirname})
 })
 
+app.get('/success', (req,res) => {
+    res.sendFile('/views/success.html', {root: __dirname})
+})
+
 //post request
 app.post('/signup', async (req,res) =>{
     
@@ -46,7 +50,7 @@ app.post('/signup', async (req,res) =>{
 
     db.collection('Users').insertOne(data, (err,results) =>{
         if(err) throw err
-        if(results) res.send(data) 
+        if(results) res.redirect('/success')
         console.log(data)
         console.log("Account created successfully")
    

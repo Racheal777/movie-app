@@ -13,10 +13,20 @@ header{
     padding: 1em;
     display: flex;
     justify-content: flex-end;
-    box-shadow: 2px 3px 2px 3px rgb(15, 54, 54);
+    box-shadow: 5px 5px 10px rgb(12, 90, 109),
+                -5px -5px 10px rgb(14, 123, 150);
     margin-bottom: 2em;
     
 
+}
+
+header h2{
+    text-align: center;
+    margin: auto;
+    font-family: cursive;
+    line-height: 5px;
+    word-spacing: 2px;
+    text-transform: capitalize;
 }
 
 #form{
@@ -31,7 +41,7 @@ header{
     border-radius: 1.7em;
     font-size: 1em;
     padding: 0.5em 1rem;
-    border: 2px solid rgb(7, 53, 56);
+    border: 2px solid rgb(7, 13, 14);
     color: white;
 }
 
@@ -52,7 +62,8 @@ header{
 
 #card{
     background-color: rgb(14, 129, 158);
-    box-shadow: 2px 3px 2px 3px rgb(15, 54, 54);
+    box-shadow: 5px 5px 10px rgb(12, 90, 109),
+                -5px -5px 10px rgb(14, 123, 150);
     color: white;
     padding: 0.7em;
     width: 300px;
@@ -89,7 +100,8 @@ header{
 
 #container{
     background-color: rgb(14, 129, 158);
-    box-shadow: 2px 3px 2px 3px rgb(15, 54, 54);
+    box-shadow: 5px 5px 10px rgb(12, 90, 109),
+                -5px -5px 10px rgb(14, 123, 150);
     color: white;
     padding: 2em;
     width: 300px;
@@ -140,9 +152,41 @@ button a{
     color: white;
    
 }
+
+#aa a{
+    text-decoration: none;
+    font-size: 1.7em;
+    color: rgb(242, 242, 247);
+    list-style-type: none;
+    margin: 1em 2em;
+
+}
+
+#aa a:hover{
+    color: blue;
+}
+
+#success{
+    font-size: 2em;
+    background-color: rgb(14, 129, 158);
+    border-radius: 10px;
+    padding: 1.5em;
+    margin: 2em 5em;
+    text-align: center;
+    color: white;
+}
+
+
+
+
+
+
+
  @media screen and (max-width : 600px) {
      #container{
         left: 10%;
      }
+
+     
      
  }
